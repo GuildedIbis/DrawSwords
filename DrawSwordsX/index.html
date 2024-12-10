@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=chrome">
+    <title>Draw Swords</title>
+    <script src="JS/main.js" type="module"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<main>
+    <section id="opponent-side" class="play-area">
+        <div class="row">
+            <div id="opp-discard" class="card-slot"></div>
+            <div id="opp-hand" class="hand-row"></div>
+            <div id="opp-info" class="select-area"></div>
+        </div>
+        <div class="row">
+            <div id="opp-deck"class="card-slot">
+                <div id="deck"></div>
+            </div>
+            <div id="opp-active" class="active-row">
+                <div id="opp-cs6" class="card-slot"></div>
+                <div id="opp-cs5" class="card-slot"></div>
+                <div id="opp-cs4" class="card-slot"></div>
+                <div id="opp-cs3" class="card-slot"></div>
+                <div id="opp-cs2" class="card-slot"></div>
+                <div id="opp-cs1" class="card-slot"></div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section id="midfield" class="play-area">
+        MIDFIELD
+    </section>
+    <br>
+    <section id="player-side" class="play-area">
+        <div class="row">
+            <div id="player-select" class="select-area">
+                <div id="player-ss1" class="select-slot"></div>
+                <div id="player-ss2" class="select-slot"></div>
+                <div id="player-ss3" class="select-slot"></div>
+                <div id="player-ss4" class="select-slot"></div>
+                <div id="player-ss5" class="select-slot"></div>
+                <div id="player-sb" class="select-button"></div>
+            </div>
+            <div id="player-active" class="active-row">
+                <div class="active-slot"><div id="player-as1"></div></div>
+                <div class="active-slot"><div id="player-as2"></div></div>
+                <div class="active-slot"><div id="player-as3"></div></div>
+                <div class="active-slot"><div id="player-as4"></div></div>
+                <div class="active-slot"><div id="player-as5"></div></div>
+                <div class="active-slot"><div id="player-as6"></div></div>
+            </div>
+            <div id="player-deck" class="card-slot">
+                <div id="deck" class="card"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="player-hand" class="hand-row">
+                <div id="player-hs1" class="hand-slot"></div>
+                <div id="player-hs2" class="hand-slot"></div>
+                <div id="player-hs3" class="hand-slot"></div>
+                <div id="player-hs4" class="hand-slot"></div>
+                <div id="player-hs5" class="hand-slot"></div>
+                <div id="player-hs6" class="hand-slot"></div>
+                <div id="player-hs7" class="hand-slot"></div>
+            </div>
+            <div id="hand-row-button">
+                <div id="hand-row-up"></div>
+                <div id="current-row"></div>
+                <div id="hand-row-down"></div>
+            </div>
+            <div id="player-discard" class="card-slot"></div>
+        </div>
+    </section>
+    <section class="dialogue">
+    </section>
+</main>
+    
+</body> 
+</html>

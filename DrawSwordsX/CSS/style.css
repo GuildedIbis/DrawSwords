@@ -1,0 +1,187 @@
+/*style.css*/
+
+/*Built In Selectors*/
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    width: 120rem;
+    height: 67.5rem;
+    margin: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+
+/*Custom Classes*/
+.active-row {
+    display: flex;
+    width: 854px;
+    justify-content: space-between;
+}
+.card-slot {
+    border: 4px dashed white;
+    border-radius: .5rem;
+    width: 129px;
+    height: 168px;
+    padding: .5rem;
+}
+.hand-slot {
+    height: 144px;
+    width: 105px;
+}
+.active-slot {
+    border: 4px dashed white;
+    border-radius: .5rem;
+    width: 129px;
+    height: 168px;
+    padding: .5rem;
+}
+.hand-row{
+    border: 4px dashed white;
+    border-radius: .5rem;
+    width: 854px;
+    height: 168px;
+    padding: .5rem;
+}
+.dialogue {
+    position: absolute;
+    top: 1rem;
+    left: 82rem;
+    min-width: 332px;
+    height: 47rem;
+    border: 4px solid white;
+    margin: 1rem;
+}
+.select-area {
+    padding-top: .5rem;
+    border: 4px solid white;
+    border-radius: .5rem; 
+    list-style-type: none;
+    height: 352px;
+    width: 11rem;
+}
+.select-slot {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    height: 144px;
+    width: 105px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.select-button{
+    border-radius: .5rem;
+}
+.button-on{
+    position: absolute;
+    background-color: rgb(235, 215, 105);
+    color: black;
+    bottom: .5rem;
+    width: 9.5rem;
+    margin-right: 8px;
+    margin-left: 8px;
+    font-size: 32px;
+    text-align: center;
+ 
+}
+.button-off{
+    height: 0px;
+    width: 0px;
+    background-color: black;
+}
+.card {
+    height: 144px;
+    width: 105px;
+}
+/*Custom IDs*/
+#opp-discard{
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+}
+#opp-hand{
+    position: absolute;
+    top: 2rem;
+    left: 16.5rem;
+}
+#opp-deck {
+    padding: .5rem;
+    position: absolute;
+    top: 13.5rem;
+    left: 64px;
+}
+#opp-active{
+    position: absolute;
+    top: 13.5rem;
+    left: 16.5rem;
+}
+#opp-info{
+    position: absolute;
+    top: 2rem;
+    left: 71rem;
+}
+#deck {
+    width: 105px;
+    height: 144px;
+    background: url(../IMG/spr_card_standard_all.png) 0 -576px;
+}
+#midfield {
+    position: absolute;
+    top: 24.5rem;
+    left: 264px;
+    text-align: center;
+}
+#player-select {
+    position: absolute;
+    top: 27rem;
+    left: 4rem;
+}
+#player-active {
+    position: absolute;
+    top: 27rem;
+    left: 16.5rem;
+}
+#player-deck{
+    position: absolute;
+    top: 27rem;
+    left: 74rem;
+    padding: .5rem;
+}
+#player-hand {
+    position: absolute;
+    display: flex;
+    top: 38.5rem;
+    left: 264px;
+}
+#player-discard{
+    position: absolute;
+    top: 38.5rem;
+    left: 74rem;
+}
+#hand-row-up{
+    position: absolute;
+    top: 40rem;
+    left: 65rem;
+    width: 39px;
+    height: 33px;
+    background: url(../IMG/spr_card_standard_all.png) -105px -576px;
+}
+#hand-row-down {
+    position: absolute;
+    top: 45rem;
+    left: 65rem;
+    width: 39px;
+    height: 33px;
+    background: url(../IMG/spr_card_standard_all.png) -105px -609px;
+}
+#current-row {
+    font-family: "Courier New", Courier, monospace;
+    position: absolute;
+    top: 43rem;
+    left: 65.25rem;
+}
