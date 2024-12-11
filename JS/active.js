@@ -20,11 +20,11 @@ export class Active {
         this.cards[5] = undefined;
     };
 
-    add_to_active(card){
+    addToActive(card){
         this.cards[0] = card;
     };
 
-    move_selected_forward(_slotNum){
+    moveSelectedForward(_slotNum){
         let _newSlot = _slotNum + 1; 
         console.log(this.cards[_newSlot])
         if (this.cards[_newSlot] === undefined && _newSlot <= 5)
@@ -46,54 +46,56 @@ export const initializeActive = () => {
     el_player_as5.addEventListener("click",function(){move_active_forward(el_player_as5,4)});
 };
 //
-const move_active_forward = (_element,_slotNum) => {
+const moveActiveForward = (_element,_slotNum) => {
     console.log("Move Active Forward");
     player_active.move_selected_forward(_slotNum);
     update_html_active();
 };
 //
-const update_html_active = () => {
+export const updateNodeActive = () => {
     console.log("Player Active HTML Updated");
     for (let i = 0 ; i <= 5; i = i + 1){
         switch(i) {
             case 0:
-                update_html_active_slot(el_player_as1,0);
+                updateNodeActiveSlot(el_player_as1,0);
                 break;
             case 1:
-                update_html_active_slot(el_player_as2,1);
+                updateNodeActiveSlot(el_player_as2,1);
                 break;
             case 2:
-                update_html_active_slot(el_player_as3,2);
+                updateNodeActiveSlot(el_player_as3,2);
                 break;
             case 3:
-                update_html_active_slot(el_player_as4,3);
+                updateNodeActiveSlot(el_player_as4,3);
                 break;
             case 4:
-                update_html_active_slot(el_player_as5,4);
+                updateNodeActiveSlot(el_player_as5,4);
                 break;
             case 5:
-                update_html_active_slot(el_player_as6,5);
+                updateNodeActiveSlot(el_player_as6,5);
                 break;
         }
     };
 };
 //
-const update_html_active_slot = (_element,_slotNum) => {
+const updateNodeActiveSlot = (_element,_slotNum) => {
     if (player_active.cards[_slotNum] != undefined)
     {
         let _card = player_active.cards[_slotNum];
-        card_sprY = Object.values(_card)[0] * -144;
-        card_sprX = (Object.values(_card)[1] - 2) * -105;
+        let _cardSprY = Object.values(_card)[0] * -144;
+        let _cardSprX = (Object.values(_card)[1] - 2) * -105;
         _element.setAttribute("suit",Object.values(_card)[0]);
         _element.setAttribute("value",Object.values(_card)[1]);
         _element.style.background = "url(..//IMG/spr_card_standard_all.png)";
-        _element.style.backgroundPosition = `${card_sprX}px ${card_sprY}px`;
+        _element.style.backgroundPosition = `${_cardSprX}px ${_cardSprY}px`;
         _element.style.border = "none";
         _element.classList.add("card");
+        /*
         player_hand_size = player_hand.cards.length;
         if (player_hand_size === 0) {
             el_player_hand.innerHTML = "";
         };
+        */
     }
     else
     {

@@ -1,7 +1,7 @@
 //selkected.js
 //
-import {player_active} from './active.js';
-import {nodeHandToActive} from './hand.js';
+import {player_active,updateNodeActive} from './active.js';
+import {player_hand,updateNodeHand} from './hand.js';
 //
 export let player_selected;
 //
@@ -146,7 +146,15 @@ const selectButtonActivate = () => {
             console.log("Enter Button");
             el_player_sb.classList.remove("button-on");
             el_player_sb.classList.add("button-off");
-            nodeHandToActive();
+            //Update JS
+            player_active.addToActive(player_selected.cards[0]);
+            player_hand.moveFromHand(player_selected.cards[0]);
+            player_selected.deselect(player_selected.cards[0]);
+            //update HTML and CSS
+            updateNodeActive();
+            updateNodeHand();
+            updateSelected();
+            //console.log(player_active);
             el_player_sb.innerHTML = "";
         break;
         case 1:
