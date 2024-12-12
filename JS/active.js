@@ -39,17 +39,17 @@ export class Active {
 //
 export const initializeActive = () => {
     player_active = new Active();
-    el_player_as1.addEventListener("click",function(){move_active_forward(el_player_as1,0)});
-    el_player_as2.addEventListener("click",function(){move_active_forward(el_player_as2,1)});
-    el_player_as3.addEventListener("click",function(){move_active_forward(el_player_as3,2)});
-    el_player_as4.addEventListener("click",function(){move_active_forward(el_player_as4,3)});
-    el_player_as5.addEventListener("click",function(){move_active_forward(el_player_as5,4)});
+    el_player_as1.addEventListener("click",function(){moveActiveForward(el_player_as1,0)});
+    el_player_as2.addEventListener("click",function(){moveActiveForward(el_player_as2,1)});
+    el_player_as3.addEventListener("click",function(){moveActiveForward(el_player_as3,2)});
+    el_player_as4.addEventListener("click",function(){moveActiveForward(el_player_as4,3)});
+    el_player_as5.addEventListener("click",function(){moveActiveForward(el_player_as5,4)});
 };
 //
 const moveActiveForward = (_element,_slotNum) => {
     console.log("Move Active Forward");
-    player_active.move_selected_forward(_slotNum);
-    update_html_active();
+    player_active.moveSelectedForward(_slotNum);
+    updateNodeActive();
 };
 //
 export const updateNodeActive = () => {

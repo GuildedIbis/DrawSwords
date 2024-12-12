@@ -1,7 +1,7 @@
 //selkected.js
 //
 import {player_active,updateNodeActive} from './active.js';
-import {player_hand,updateNodeHand} from './hand.js';
+import {player_hand,nodeHandDeselectAll,updateNodeHand} from './hand.js';
 //
 export let player_selected;
 //
@@ -154,6 +154,7 @@ const selectButtonActivate = () => {
             updateNodeActive();
             updateNodeHand();
             updateSelected();
+            nodeHandDeselectAll();
             //console.log(player_active);
             el_player_sb.innerHTML = "";
         break;

@@ -62,13 +62,7 @@ export const nodeHandSelect = (_element,_index) => {
         let _isSelected = _element.classList.contains("selected");
         if (_isSelected === true)
         {
-            //Remove Select
-            let _child = _element.getElementsByClassName("select");
-            //console.log(_child[0]);
-            _element.removeChild(_child[0]);
-            _element.classList.remove("selected");
-            player_selected.deselect(player_hand.cards[_index]);
-            updateSelected();
+            nodeHandDeselect(_element,_index);
         }
         else if (player_selected.cards[4] === undefined)
         {
@@ -93,8 +87,49 @@ export const nodeHandSelect = (_element,_index) => {
     //console.log("end nodeHandSelect");
 };
 //
+export const nodeHandDeselect = (_element,_index) => {
+    //Remove Select
+    let _child = _element.getElementsByClassName("select");
+    //console.log(_child[0]);
+    _element.removeChild(_child[0]);
+    _element.classList.remove("selected");
+    player_selected.deselect(player_hand.cards[_index]);
+    updateSelected();
+};
+//
+export const nodeHandDeselectAll = () => {
+    for (let i = 0 ; i <= 6; i = i + 1){
+        let _cardIndex = i + (7 * (player_current_hand - 1))
+        switch(i) {
+            case 0:
+                nodeHandDeselect(el_player_hs1,_cardIndex);
+                break;
+            case 1:
+                nodeHandDeselect(el_player_hs2,_cardIndex);
+                break;
+            case 2:
+                nodeHandDeselect(el_player_hs3,_cardIndex);
+                break;
+            case 3:
+                nodeHandDeselect(el_player_hs4,_cardIndex);
+                break;
+            case 4:
+                nodeHandDeselect(el_player_hs5,_cardIndex);
+                break;
+            case 5:
+                nodeHandDeselect(el_player_hs6,_cardIndex);
+                break;
+            case 6:
+                nodeHandDeselect(el_player_hs7,_cardIndex);
+                break;
+        }
+    };
+
+    console.log("Deselect All Cards");
+}
+//
 export const nodeHandToActive = (_element,_index) => {
-    ///*
+    /*
     //Move to Active HTML
     let _cardIndex = _index + (7 * (player_current_hand - 1))
     let _newActive = player_hand.cards[_cardIndex];
@@ -114,7 +149,7 @@ export const nodeHandToActive = (_element,_index) => {
     //Update GUI
     update_html_hand();
     //update_html_active();
-    //*/
+    */
     console.log("end nodeHandToActive")
 };
 //
