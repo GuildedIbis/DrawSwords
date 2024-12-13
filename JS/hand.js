@@ -59,12 +59,8 @@ export const nodeHandSelect = (_element,_index) => {
     let _hasCard = _element.classList.contains("card");
     if (_hasCard === true)
     {
-        let _isSelected = _element.classList.contains("selected");
-        if (_isSelected === true)
-        {
-            nodeHandDeselect(_element,_index);
-        }
-        else if (player_selected.cards[4] === undefined)
+        let _selector = nodeHandDeselect(_element,_index)
+        if (_selector === false && player_selected.cards[4] === undefined)
         {
             //Select Card
             let _selectCard = player_hand.cards[_index];
@@ -88,13 +84,22 @@ export const nodeHandSelect = (_element,_index) => {
 };
 //
 export const nodeHandDeselect = (_element,_index) => {
-    //Remove Select
-    let _child = _element.getElementsByClassName("select");
-    //console.log(_child[0]);
-    _element.removeChild(_child[0]);
-    _element.classList.remove("selected");
-    player_selected.deselect(player_hand.cards[_index]);
-    updateSelected();
+    let _isSelected = _element.classList.contains("selected");
+    if (_isSelected === true)
+    {
+        //Remove Select
+        let _child = _element.getElementsByClassName("select");
+        console.log(_child[0]);
+        _element.removeChild(_child[0]);
+        _element.classList.remove("selected");
+        player_selected.deselect(player_hand.cards[_index]);
+        updateSelected();
+        return true;
+    }
+    else{
+        return false;
+    }
+    
 };
 //
 export const nodeHandDeselectAll = () => {
