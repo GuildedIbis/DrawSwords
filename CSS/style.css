@@ -139,34 +139,34 @@ body {
 }
 #player-select {
     position: absolute;
-    top: 27rem;
+    top: 32.5rem;
     left: 4rem;
 }
 #player-active {
     position: absolute;
-    top: 27rem;
+    top: 32.5rem;
     left: 16.5rem;
 }
 #player-deck{
     position: absolute;
-    top: 27rem;
+    top: 32.5rem;
     left: 74rem;
     padding: .5rem;
 }
 #player-hand {
     position: absolute;
     display: flex;
-    top: 38.5rem;
+    top: 44rem; /*38.5*/
     left: 264px;
 }
 #player-discard{
     position: absolute;
-    top: 38.5rem;
+    top: 44rem;
     left: 74rem;
 }
 #hand-row-up{
     position: absolute;
-    top: 40rem;
+    top: 45.5rem;
     left: 65rem;
     width: 39px;
     height: 33px;
@@ -174,7 +174,7 @@ body {
 }
 #hand-row-down {
     position: absolute;
-    top: 45rem;
+    top: 50.5rem;
     left: 65rem;
     width: 39px;
     height: 33px;
@@ -183,6 +183,6 @@ body {
 #current-row {
     font-family: "Courier New", Courier, monospace;
     position: absolute;
-    top: 43rem;
+    top: 48.5rem;
     left: 65.25rem;
 }
